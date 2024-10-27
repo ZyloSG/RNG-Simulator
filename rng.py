@@ -10,22 +10,24 @@ def RandomNumber(min_value: int, max_value: int):
     return generatednumber
 
 # base
-def levelbase(currentleveldef, currentlevel: str, minvalue: int, maxvalue: int, nextlevel):
-    os.system("cls")
-    needednumber = RandomNumber(minvalue, maxvalue)
-    print("Welcome to level " + currentlevel + "!")
-    print("Your numbers will be ranging from " + minvalue.__str__() + " to " + maxvalue.__str__())
-    print("The needed number is: " + needednumber.__str__())
-    rngnumber = input("Press any key to generate your random number")
-    rngnumber = RandomNumber(minvalue, maxvalue)
-    if (rngnumber != needednumber):
+def levelbase(currentleveldef, currentlevel: str, minvalue: int, maxvalue: int, nextleveldef):
+    while True:
+     os.system("cls")
+     needednumber = RandomNumber(minvalue, maxvalue)
+     print("Welcome to level " + currentlevel + "!")
+     print("Your numbers will be ranging from " + minvalue.__str__() + " to " + maxvalue.__str__())
+     print("The needed number is: " + needednumber.__str__())
+     rngnumber = input("Press any key to generate your random number")
+     rngnumber = RandomNumber(minvalue, maxvalue)
+     if (rngnumber != needednumber):
         print("Better luck next time! Your Number: " + rngnumber.__str__())
         input("Press enter to try again")
         currentleveldef()
-    elif (rngnumber == needednumber):
+     elif (rngnumber == needednumber):
         print("Wow! you did it! Your Number: " + rngnumber.__str__())
         input("Press enter to go to next level")
-        nextlevel()
+        nextleveldef()
+        break
 
 # levels
 def level1():
