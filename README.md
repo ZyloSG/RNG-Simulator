@@ -1,5 +1,5 @@
 # RNG Simulator
-- Current Version: 1.0
+- Current Version: 1.1
 
 ## How to Play
 Install [Python](https://www.python.org/downloads/) on your machine, install the [latest release](https://github.com/ZyloSG/RNG-Simulator/releases) and open the run.bat file.
